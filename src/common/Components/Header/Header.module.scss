@@ -1,0 +1,32 @@
+.header {
+  min-width: 320px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.logo {
+  min-width: 200px;
+  float: left;
+  display: block;
+  height: 30px;
+  margin: 16px 32px;
+}
+.menu {
+  min-width: 120px;
+  float: right;
+  display: block;
+  height: 30px;
+}
+
+/* Min screen */
+@media (max-width: 576px) {
+  .logo {
+    margin: 8px 16px;
+    max-width: 100px;
+  }
+
+  .main {
+    padding: 32px;
+    background-color: pink;
+  }
+}

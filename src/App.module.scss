@@ -1,0 +1,171 @@
+@import "./variables.scss";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1 {
+  color: $primary-color;
+}
+html {
+  height: 100%;
+}
+* {
+  font-family: Helvetica;
+}
+
+#root {
+  height: 100%;
+}
+
+.title {
+  font-weight: bold;
+  color: #2a2a2a;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.titleName {
+  text-transform: uppercase;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: black;
+  margin-block-end: 0;
+}
+
+.titleContent {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 200;
+  color: black;
+}
+
+h2 {
+  color: $secondary-color;
+}
+.App {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  height: 100%;
+  width: 100%;
+  padding: 64px;
+}
+
+.header {
+  pointer-events: none;
+}
+
+.titleGroup {
+  z-index: 2;
+  font-size: 30px;
+  //margin: 0 auto 0 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.secondPage {
+  width: 100%;
+  height: 100%;
+  background-color: #010c30;
+}
+
+.landingContainer {
+  -ms-overflow-style: none;
+  background-color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@for $item from 1 through 30 {
+  rect:nth-child(#{$item}) {
+    animation-delay: -#{$item/3}s;
+  }
+}
+
+rect {
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  animation: up 5s infinite ease;
+  animation-direction: alternate;
+}
+
+@keyframes up {
+  to {
+    transform: scaleY(5);
+    transform-origin: 0 300;
+  }
+}
+
+/*
+div {
+    position: absolute;
+    left: 0;
+    width: 10%;
+    animation: translate 15s infinite linear;
+}
+
+img {
+    position: absolute;
+    animation: upDown 1.5s alternate infinite ease-in-out;
+    width: 100%;
+}
+
+@keyframes upDown {
+    to {
+        transform: translatey(100px);
+    }
+}
+
+@keyframes translate {
+    to {
+        transform: translatex(900%);
+    }
+}*/
+
+/* Min screen */
+@media (max-width: 576px) {
+  .titleGroup {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .main {
+    padding: 32px;
+    background-color: pink;
+  }
+}
