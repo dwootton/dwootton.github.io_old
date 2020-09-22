@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dwootton.github.io/precache-manifest.ad465be28d0ed45fc4e688446a25731f.js"
+  "/dwootton.github.io/precache-manifest.9557b9d11bf09eb199d64465394534a8.js"
 );
 
 self.addEventListener('message', (event) => {
