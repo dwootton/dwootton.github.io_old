@@ -28,7 +28,7 @@ const Header = (props) => {
         <Hidden mdUp>
           <IconButton
             style={{float: "right"}}
-            color='inherit'
+            color='#2a2a2a'
             aria-label='open drawer'
             onClick={handleDrawerToggle}>
             <Menu />

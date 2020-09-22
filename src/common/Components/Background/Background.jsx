@@ -5,6 +5,8 @@ const Background = () => {
   return (
     <div className={styles.background}>
       <Particles
+      height={window.innerHeight}
+      width={window.innerWidth}
         params={{
           fpsLimit: 45,
           particles: {
@@ -23,7 +25,7 @@ const Background = () => {
                 enable: true,
                 value_area: 800,
               },
-              value: 20,
+              value: 45,
             },
             opacity: {
               value: 0.3,
