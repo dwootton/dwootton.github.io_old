@@ -1,8 +1,51 @@
-.header {
-  min-width: 320px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
+.appBar {
+  display: flex;
+  border: 0px;
+  border-radius: 3px;
+  padding: 0.625rem 0;
+  margin-bottom: 20px;
+  color: whitesmoke !important;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+  transition: all 150ms ease 0s;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  z-index: unset;
+}
+.tooltip {
+  background-color: pink;
+  height: 60px;
+}
+.toolBar {
+  width: 100%;
+  justify-content: space-between;
+}
+.container {
+  padding: 15px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.list {
+  font-size: 14px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: inherit;
+}
+.listItem {
+  display: block;
+  float: left;
+  color: inherit;
+  position: relative;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 .logo {
   min-width: 200px;
@@ -11,11 +54,41 @@
   height: 30px;
   margin: 16px 32px;
 }
+
 .menu {
   min-width: 120px;
   float: right;
   display: block;
   height: 30px;
+}
+
+.nav {
+  float: right;
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+  position: static;
+  background: transparent;
+  width: auto;
+  list-style: none;
+}
+.menuItem {
+  display: inline-block;
+  float: left;
+  position: relative;
+  height: 92px;
+  border: 0px;
+}
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.socialIcons {
+  position: relative;
+  font-size: 20px;
+  margin-right: 4px;
 }
 
 /* Min screen */
@@ -25,8 +98,15 @@
     max-width: 100px;
   }
 
-  .main {
-    padding: 32px;
-    background-color: pink;
+  .social {
+    margin-left: 20px;
+  }
+  .listItem {
+    width: calc(100% - 30px);
+    content: "";
+    display: block;
+    height: 1px;
+    margin-left: 15px;
+    background-color: #e5e5e5;
   }
 }

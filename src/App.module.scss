@@ -67,6 +67,7 @@ h2 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .App-logo {
@@ -161,11 +162,22 @@ img {
 @media (max-width: 576px) {
   .titleGroup {
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
   }
-
+  .titleName {
+    margin-block-start: 64px;
+  }
   .main {
     padding: 32px;
-    background-color: pink;
   }
+  .social {
+    margin-left: 20px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+.social {
+  margin-left: 20px;
 }
