@@ -15,10 +15,7 @@
   position: relative;
   z-index: unset;
 }
-.tooltip {
-  background-color: pink;
-  height: 60px;
-}
+
 .toolBar {
   width: 100%;
   justify-content: space-between;
@@ -84,7 +81,12 @@
   height: 20px;
   margin-right: 3px;
 }
-
+.tooltip {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px;
+  font-size: 11;
+}
 .socialIcons {
   position: relative;
   font-size: 20px;
