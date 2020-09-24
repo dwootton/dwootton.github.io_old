@@ -35,7 +35,7 @@ export default function HeaderLinks(props) {
     isPaused={false}
     isStopped={false}
   />
-  <span className={styles.copiedText}>Copied!</span>
+  <span className={styles.copiedText}>Copied Email!</span>
   </div>
   }
   const [emailContent, setEmailContent]= useState('toCopy')
