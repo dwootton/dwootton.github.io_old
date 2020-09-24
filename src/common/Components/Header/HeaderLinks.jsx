@@ -43,31 +43,35 @@ export default function HeaderLinks(props) {
     <List className={styles.list} style={{flexDirection: "row", display: "flex"}}>
       <ListItem className={styles.listItem}>
         <Tooltip
+id='mail-tooltip'
+title={mapper[emailContent]}
+placement={"bottom"}
+classes={{tooltip: styles.tooltip}}
+enterDelay={500} leaveDelay={200}
+>
+<IconButton
+  aria-label='copyEmail'
+  className={styles.listItemButton}
+  onMouseLeave={()=>{
+    setTimeout(function () {
+      setEmailContent('toCopy')
+    }, 400);
+    }}
+  onClick={(event) => {
+    //console.log(document.querySelector('#mail-tooltip div'))
+    //document.querySelector('#mail-tooltip div').style.backgroundColor = "#CCFFCC";
+    //document.querySelector('#mail-tooltip div').innerHTML = "Copied!";
 
-          id='mail-tooltip'
-          title={mapper[emailContent]}
-          placement={"bottom"}
-          classes={{tooltip: styles.tooltip}}
-          >
-          <IconButton
-            aria-label='copyEmail'
-            onMouseLeave={()=>{
-              setTimeout(function () {
-                setEmailContent('toCopy')
-              }, 400);
-              }}
-            onClick={(event) => {
-              //console.log(document.querySelector('#mail-tooltip div'))
-              //document.querySelector('#mail-tooltip div').style.backgroundColor = "#CCFFCC";
-              //document.querySelector('#mail-tooltip div').innerHTML = "Copied!";
+    copyEmail(event);
+    setEmailContent('copied');
 
-              copyEmail(event);
-              setEmailContent('copied');
+  }}>
+  <MailIcon color={"white"} />
+</IconButton>
+</Tooltip>
 
-            }}>
-            <MailIcon color={"white"} />
-          </IconButton>
-        </Tooltip>
+
+      
       </ListItem>
       <ListItem className={styles.listItem}>
         <Tooltip
@@ -76,6 +80,8 @@ export default function HeaderLinks(props) {
           placement={"bottom"}
           classes={{tooltip: styles.tooltip}}>
           <IconButton
+                      className={styles.listItemButton}
+
             aria-label='delete'
             href='https://twitter.com/WoottonDylan'
             target='_blank'
@@ -91,6 +97,8 @@ export default function HeaderLinks(props) {
           placement={"bottom"}
           classes={{tooltip: styles.tooltip}}>
           <IconButton
+                      className={styles.listItemButton}
+
             aria-label='delete'
             href='https://www.linkedin.com/in/dylanwootton/'
             target='_blank'
