@@ -43,10 +43,10 @@ export default function HeaderLinks(props) {
     <List className={styles.list} style={{flexDirection: "row", display: "flex"}}>
       <ListItem className={styles.listItem}>
         <Tooltip
-          
+
           id='mail-tooltip'
           title={mapper[emailContent]}
-          placement={window.innerWidth > 500 ? "left" : "left"}
+          placement={"bottom"}
           classes={{tooltip: styles.tooltip}}
           >
           <IconButton
@@ -73,7 +73,7 @@ export default function HeaderLinks(props) {
         <Tooltip
           id='instagram-twitter'
           title='Follow me on twitter'
-          placement={window.innerWidth > 500 ? "bottom" : "left"}
+          placement={"bottom"}
           classes={{tooltip: styles.tooltip}}>
           <IconButton
             aria-label='delete'
@@ -88,7 +88,7 @@ export default function HeaderLinks(props) {
         <Tooltip
           id='instagram-twitter'
           title='Connect with me on Linkedin'
-          placement={window.innerWidth > 500 ? "bottom" : "left"}
+          placement={"bottom"}
           classes={{tooltip: styles.tooltip}}>
           <IconButton
             aria-label='delete'
