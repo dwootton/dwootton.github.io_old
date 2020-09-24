@@ -10,6 +10,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 import HeaderLinks from "./HeaderLinks";
+import Lottie from 'react-lottie';
 
 const Header = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header = (props) => {
         </Hidden>
       </Toolbar>
       <Hidden mdUp implementation='js'>
-        <Drawer variant='temporary' anchor={"top"} open={mobileOpen} onClose={handleDrawerToggle}>
+        <Drawer variant='temporary' anchor={"right"} open={mobileOpen} onClose={handleDrawerToggle}>
           <div>
             {" "}
             <HeaderLinks></HeaderLinks>

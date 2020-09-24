@@ -2,7 +2,8 @@ import React , {useState}from "react";
 
 // react components for routing our app without refresh
 import {Link} from "react-router-dom";
-
+import Lottie from 'react-lottie';
+import * as animationData from './copiedEmail.json'
 // @material-ui/core components
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -15,30 +16,53 @@ import {IconButton} from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailIcon from "@material-ui/icons/Mail";
-export default function HeaderLinks(props) {
 
+export default function HeaderLinks(props) {
+  console.log(animationData);
+  const defaultOptions = {
+    loop: false,
+    autoplay: true, 
+    animationData: animationData.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const mapper = {
+    'toCopy' : <span>Click to copy my email!</span>,
+    'copied': <div><Lottie options={defaultOptions}
+    height={40}
+    width={40}
+    isPaused={false}
+    isStopped={false}
+  />
+  <span className={styles.copiedText}>Copied!</span>
+  </div>
+  }
+  const [emailContent, setEmailContent]= useState('toCopy')
   return (
     <List className={styles.list} style={{flexDirection: "row", display: "flex"}}>
       <ListItem className={styles.listItem}>
         <Tooltip
-        arrow
-        interactive
-          id='mail-tooltip'
-          title='Click to copy email to clipboard.'
-          TransitionComponent={Fade} TransitionProps={{ timeout: {appear:100, enter: 100, exit:900} }}
+                    id='mail-tooltip'
+          title={mapper[emailContent]}
           placement={window.innerWidth > 500 ? "bottom" : "left"}
           classes={{tooltip: styles.tooltip}}
           >
           <IconButton
             aria-label='delete'
-            onClick={() => {
+            onMouseLeave={()=>{
+              setTimeout(function () {
+                setEmailContent('toCopy')
+              }, 400);
+              }}
+            onClick={(event) => {
               //console.log(document.querySelector('#mail-tooltip div'))
-              document.querySelector('#mail-tooltip div').style.backgroundColor = "#CCFFCC";
-              document.querySelector('#mail-tooltip div').innerHTML = "Copied!";
+              //document.querySelector('#mail-tooltip div').style.backgroundColor = "#CCFFCC";
+              //document.querySelector('#mail-tooltip div').innerHTML = "Copied!";
 
+              copyEmail(event);
+              setEmailContent('copied');
 
-              copyToClipboard("wootton.dylan@gmail.com");
-              document.querySelector('#mail-tooltip').focus();
             }}>
             <MailIcon color={"white"} />
           </IconButton>
@@ -76,6 +100,16 @@ export default function HeaderLinks(props) {
       </ListItem>
     </List>
   );
+}
+
+async function copyEmail(e){
+  if(navigator.clipboard){
+    e.preventDefault();
+    //e.nativeEvent.preventDefault();
+    //e.nativeEvent.stopPropogation();
+    await navigator.clipboard.writeText('wootton.dylan@gmail.com');
+    return
+  }
 }
 
 function copyToClipboard(text) {
