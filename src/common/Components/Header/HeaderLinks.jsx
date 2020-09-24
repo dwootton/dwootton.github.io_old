@@ -43,13 +43,14 @@ export default function HeaderLinks(props) {
     <List className={styles.list} style={{flexDirection: "row", display: "flex"}}>
       <ListItem className={styles.listItem}>
         <Tooltip
-                    id='mail-tooltip'
+          
+          id='mail-tooltip'
           title={mapper[emailContent]}
-          placement={window.innerWidth > 500 ? "bottom" : "left"}
+          placement={window.innerWidth > 500 ? "left" : "left"}
           classes={{tooltip: styles.tooltip}}
           >
           <IconButton
-            aria-label='delete'
+            aria-label='copyEmail'
             onMouseLeave={()=>{
               setTimeout(function () {
                 setEmailContent('toCopy')

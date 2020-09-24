@@ -37,8 +37,8 @@ const Header = (props) => {
         </Hidden>
       </Toolbar>
       <Hidden mdUp implementation='js'>
-        <Drawer variant='temporary' anchor={"right"} open={mobileOpen} onClose={handleDrawerToggle}>
-          <div>
+        <Drawer variant='temporary' anchor={"top"} height={50} open={mobileOpen} onClose={handleDrawerToggle}>
+          <div className={styles.mobileDrawer}>
             {" "}
             <HeaderLinks></HeaderLinks>
           </div>
