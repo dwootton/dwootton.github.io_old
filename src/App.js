@@ -23,11 +23,15 @@ function App() {
           <div className={styles.titleGroup}>
           <Fade bottom>
             <h4 className={styles.titleName}> Dylan Wootton </h4>
-            <h1 className={styles.title}> Data Visualization Engineer </h1>
             </Fade>
             <Fade bottom>
+            <h1 className={styles.title}> Data Visualization Engineer </h1>
+
+            </Fade>
+            
+            <Fade bottom>
             <p className={styles.titleContent}>
-              I develop interactive visualization tools that makes data science easier. Currently, I
+              I develop interactive visualization tools that make data science easier. Currently, I
               am visualizing product telemetry data at Microsoft.
               <br></br>
               <br></br>

@@ -17,18 +17,18 @@ const Background = () => {
               color: "#262626",
               distance: 150,
               enable: true,
-              opacity: 0.3,
+              opacity: 0.2,
               width: 1,
             },
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 900,
               },
               value: 45,
             },
             opacity: {
-              value: 0.3,
+              value: 0.2,
             },
             shape: {
               type: "circle",
@@ -37,6 +37,9 @@ const Background = () => {
               random: true,
               value: 5,
             },
+            move : {
+              speed : .65
+            }
           },
           detectRetina: true,
         }}
