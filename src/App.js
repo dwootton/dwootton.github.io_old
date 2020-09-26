@@ -39,11 +39,8 @@ function App() {
               <a target={"blank"} href={"https://vdl.sci.utah.edu/"}>
                 Visualization Design Lab
               </a>
-              . Future researcher at{" "}
-              <a target={"blank"} href={"http://vis.csail.mit.edu/"}>
-                MIT Viz
-              </a>
               .
+              
             </p> </Fade>
           </div>
 
