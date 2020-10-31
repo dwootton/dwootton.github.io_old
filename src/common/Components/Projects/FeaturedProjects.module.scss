@@ -1,0 +1,35 @@
+
+.featuredProjects {
+    margin-block-start: 32px;
+}
+
+.featuredProject {
+    height:250px;
+    opacity:0.5;
+    transition: all .7s;
+}
+
+.featuredProject:hover {
+    opacity:1;
+}
+
+.projectGridTitle{
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Min screen */
+@media (max-width: 576px) {
+  .titleGroup {
+    width: 100%;
+    font-size: 22px;
+  }
+  .titleName {
+    margin-block-start: 24px;
+  }
+
+  .titleGroup {
+    margin-block-start: 96px;
+  }
+
+}
+

@@ -1,6 +1,7 @@
 module.exports = {
-  //mode: "production", 
-    mode: "development", devtool: "inline-source-map",
+    mode: "production", 
+    //mode: "development", 
+    devtool: "inline-source-map",
 
     entry: [ "./src/app.tsx"/*main*/ ], 
     output: {

@@ -10,9 +10,7 @@ h1 {
 html {
   height: 100%;
 }
-* {
-  font-family: Helvetica;
-}
+
 
 #root {
   height: 100%;
@@ -111,26 +109,6 @@ h2 {
   }
 }
 
-@for $item from 1 through 30 {
-  rect:nth-child(#{$item}) {
-    animation-delay: -#{$item/3}s;
-  }
-}
-
-rect {
-  will-change: transform;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  animation: up 5s infinite ease;
-  animation-direction: alternate;
-}
-
-@keyframes up {
-  to {
-    transform: scaleY(5);
-    transform-origin: 0 300;
-  }
-}
 
 /*
 div {

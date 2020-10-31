@@ -72,3 +72,5 @@ let projects = [
     featured: true,
   },
 ];
+
+export default projects;
