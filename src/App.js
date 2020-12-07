@@ -1,29 +1,26 @@
 import React from "react";
 import "./App.scss";
-import Fade from 'react-reveal';
+import { MemoryRouter } from "react-router-dom";
+
 import styles from "./App.module.scss";
-import {StylesProvider} from "@material-ui/core/styles";
+import { StylesProvider } from "@material-ui/core/styles";
 
 import Header from "./common/Components/Header/Header";
-import Home from "./common/Components/Home/Home";
-
-const dashboardRoutes = [];
+import Main from './common/Components/Main/Main'
 
 function App() {
-  //const ref = useRef(Parallax)
   return (
     <StylesProvider injectFirst>
       <div className={styles.App}>
-      <Fade top>
-      <Header></Header>
-      </Fade>
-        
 
-        <div className={styles.main}>
-          <Home></Home>
-        
+        <MemoryRouter initialEntries={["/Home"]} initialIndex={0}>
+        <Header></Header>
 
-        </div>
+              <div className={styles.main}>
+                <Main></Main>
+              </div>
+          </MemoryRouter>
+        
       </div>
     </StylesProvider>
   );

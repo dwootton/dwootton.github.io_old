@@ -11,8 +11,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 const FeaturedProjects = (props)=>{
+  const projects =[{id:'revisit', displayTitle:'reVISit', logo:'',thumbnail:'', assetFolder:''}]
     return (<div className={styles.featuredProjects}>
-{/*
+{
     <Grid container spacing={3}  >
         <Grid item xs={12} justify={'center'} >
                 <p className={styles.projectGridTitle}>Selected Projects</p>
@@ -23,10 +24,10 @@ const FeaturedProjects = (props)=>{
       <Grid item xs={12} md={6}>
         <Paper className={styles.featuredProject}><FeaturedProject/></Paper>
       </Grid>
-</Grid>*/}
+</Grid>}
 
     </div>)
-}
+} 
 
 const FeaturedProject = () =>{
   let classes = {}
@@ -34,8 +35,8 @@ const FeaturedProject = () =>{
 <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          style={{height:300,width:300, position:'absolute',bottom:0}}
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png"
           title="Contemplative Reptile"
         />
         <CardContent>

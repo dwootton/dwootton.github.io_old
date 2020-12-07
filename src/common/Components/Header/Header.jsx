@@ -9,24 +9,24 @@ import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
+import Close from "@material-ui/icons/Close";
 import HeaderLinks from "./HeaderLinks";
-import Lottie from 'react-lottie';
+import Fade from 'react-reveal';
 
 const Header = (props) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setDrawerOpen(!drawerOpen);
   };
 
   return (
     <AppBar className={styles.appBar} style={{"background-color": "white"}}>
       <Toolbar className={styles.toolBar} style={{width: "100%"}}>
         <Logo />
-        <Hidden smDown implementation='css'>
+        {/*<Hidden smDown implementation='css'>
           <HeaderLinks></HeaderLinks>
-        </Hidden>
-        <Hidden mdUp>
+  </Hidden>*/}
           <IconButton
             style={{float: "right"}}
             color='#2a2a2a'
@@ -34,19 +34,44 @@ const Header = (props) => {
             onClick={handleDrawerToggle}>
             <Menu />
           </IconButton>
-        </Hidden>
+        
       </Toolbar>
-      <Hidden mdUp implementation='js'>
-        <Drawer variant='temporary' anchor={"top"} height={50} open={mobileOpen} onClose={handleDrawerToggle}>
-          <div className={styles.mobileDrawer}>
+                <Hidden implementation='js'>
+
+      <Drawer variant='temporary'  anchor={"top"} classes={styles.overlayDrawer}  open={drawerOpen} onClose={handleDrawerToggle}>
+          <div className={styles.overlayDrawer}>
+          <Toolbar className={styles.toolBar} style={{width: "100%"}}>
+            <Fade>
+              <Logo color={'white'}/>
+            </Fade>
+        
+        {/*<Hidden smDown implementation='css'>
+          <HeaderLinks></HeaderLinks>
+  </Hidden>*/}
+          <IconButton
+            style={{float: "right", color:'#ffffff'}}
+            aria-label='open drawer'
+            onClick={handleDrawerToggle}>
+            <Close />
+          </IconButton>
+
+      </Toolbar>
             {" "}
-            <HeaderLinks></HeaderLinks>
+            <Overlay></Overlay>
           </div>
         </Drawer>
-      </Hidden>
+        </Hidden>
+
     </AppBar>
   );
 };
+
+const Overlay = ()=>{
+  return <div>
+            <HeaderLinks></HeaderLinks>
+
+  </div>
+}
 
 Header.defaultProp = {
   color: "white",

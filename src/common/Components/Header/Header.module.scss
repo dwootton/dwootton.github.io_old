@@ -1,3 +1,5 @@
+$secondary-color : #020F03;
+
 .appBar {
   display: flex;
   border: 0px;
@@ -19,12 +21,14 @@
   width: 100%;
   justify-content: space-between;
 }
+
 .container {
   padding: 15px 0px;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
 }
+
 .list {
   font-size: 14px;
   margin: 0;
@@ -117,10 +121,43 @@
   font-size: 20px;
   margin-right: 4px;
 }
+.overlayDrawer {
+  height:100vh;
+  opacity:0.95;
+  background-color: $secondary-color;
+}
 .mobileDrawer {
   padding-top: 25px;
   padding-bottom: 25px;
-  height:100px;
+  height:100vh;
+  opacity: 0.95;
+}
+
+.overlay-content a:hover {
+  color: #f1f1f1;
+}
+
+.overlay-content li a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 48px;
+  color: lightgray;
+  font-weight: 700;
+  display: block;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content ul {
+  list-style: none;
+  padding-inline-start:0px;
+
 }
 
 /* Min screen */
@@ -136,7 +173,7 @@
     margin-left: 20px;
   }
   .listItem {
-    width: calc(100% - 30px);
+    width: calc(100% - 500px);
     content: "";
     display: flex;
     justify-content: center;

@@ -3,8 +3,9 @@
   height: 100%;
   z-index: -999;
   display: fixed;
-  position: fixed;
+  position: absolute;
   pointer-events: none;
   left: 0px;
   top: 60px;
+
 }

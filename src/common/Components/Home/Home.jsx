@@ -9,20 +9,26 @@ const Home = (props) => {
     <div>
       <Background></Background>
       <div className={styles.titleGroup}>
-        <Fade bottom delay={500}>
+      
+        <Fade bottom delay={150}>
           <h4 className={styles.titleName}> Dylan Wootton </h4>
+          </Fade>
+          <Fade bottom delay={450}>
           <h1 className={styles.title}> Data Visualization Engineer </h1>
-          <p className={styles.titleContent}>
-            I develop interactive visualization tools that make the data science process easier. 
+          </Fade>
+          <Fade bottom delay={950}>
+          <h3 className={styles.titleContent}>
+            I develop interactive visualization tools that empower organizations to find insight from their data. 
             <br></br>
             <br></br>
             Currently, I am visualizing product telemetry data at Microsoft.
-        
-          </p>{" "}
-          <p className={styles.callToAction}><span></span></p>
-        </Fade>
+          </h3>{" "}
+          </Fade>
+          <Fade bottom delay={1450}>
+          <h4 className={styles.callToAction}><span>Email me</span> or <span>see past projects</span></h4>
+          </Fade>
       </div>
-    <Fade bottom delay={500}>
+    <Fade bottom delay={1500}>
     <Projects></Projects>
 
     </Fade>
