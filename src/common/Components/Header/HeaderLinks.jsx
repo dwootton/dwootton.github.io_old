@@ -6,20 +6,14 @@ import Lottie from "react-lottie";
 import * as animationData from "./copiedEmail.json";
 // @material-ui/core components
 import List from "@material-ui/core/List";
+import Button from "@material-ui/core/Button";
+
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 import styles from "./Header.module.scss";
-import Button from "@material-ui/core/Button";
-import Fade from "react-reveal";
-import TransitionGroup from "react-transition-group/TransitionGroup";
 import { useLocation } from "react-router-dom";
 
-import { IconButton } from "@material-ui/core";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import MailIcon from "@material-ui/icons/Mail";
-import  { useTrail, useSpring, animated } from "react-spring";
-
+import {Trail} from "../../Animations/Animations";
 const MENU_ITEM_TYPES = {
   internalLink: "internalLink",
   externalLink: "externalLink",
@@ -48,32 +42,6 @@ const MenuItem = (props) => {
 };
 
 
-const CustomFade = (props)=>{
-  const animatedProps = useSpring({opacity:1,transform:'translate(0px,0px)', from : {opacity:0, transform:'translate(-25px,0px)'}})
-return <animated.div style={animatedProps}>{props.children}</animated.div>
-}
-
-function Trail({ children, delay=0, ...props }) {
-  const items = React.Children.toArray(children)
-  console.log('dywootto',items);
-  const trail = useTrail(items.length, {
-    trail:1000,
-    delay:delay,
-    from :{transform:'translate(-20px,0)', opacity:0}, opacity:1,transform:'translate(0px,0px)'
-  })
-  return (
-      <div>
-        {trail.map((spring, index) => (
-          <animated.div
-            key={index}
-            className="trails-text"
-            style={spring}>
-            {items[index]}
-          </animated.div>
-        ))}
-      </div>
-  )
-}
 
 const NavigationMenu = () => {
   const location = useLocation();
@@ -93,6 +61,7 @@ const NavigationMenu = () => {
 };
 export default NavigationMenu;
 
+/*
 function OverlayFooter(props) {
   const defaultOptions = {
     loop: false,
@@ -272,6 +241,63 @@ export function HeaderLinksOnTop(props) {
         </Tooltip>
       </ListItem>
     </List>
+  );
+}
+*/
+
+export function EmailCopyButton(props) {
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: animationData.default,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const mapper = {
+    toCopy: <span>Click to copy my email!</span>,
+    copied: (
+      <div>
+        <Lottie
+          options={defaultOptions}
+          height={40}
+          width={40}
+          isPaused={false}
+          isStopped={false}
+        />
+        <span className={styles.copiedText}>Copied Email!</span>
+      </div>
+    ),
+  };
+  const [emailContent, setEmailContent] = useState("toCopy");
+  return (
+     
+        <Tooltip
+          id='mail-tooltip'
+          title={mapper[emailContent]}
+          placement={"top"}
+          classes={{ tooltip: styles.tooltip }}
+          enterDelay={500}
+          leaveDelay={200}>
+          <Button
+            aria-label='copyEmail'
+            className={styles.listItemButton}
+            onMouseLeave={() => {
+              setTimeout(function () {
+                setEmailContent("toCopy");
+              }, 400);
+            }}
+            {...props}
+            onClick={(event) => {
+
+
+              copyEmail(event);
+              setEmailContent("copied");
+            }}>
+              Contact Me
+            </Button>
+        </Tooltip>
+
   );
 }
 

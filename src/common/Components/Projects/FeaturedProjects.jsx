@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 
 const FeaturedProjects = (props)=>{
   const projects =[{id:'revisit', displayTitle:'reVISit', logo:'',thumbnail:'', assetFolder:''}]
-    return (<div className={styles.featuredProjects}>
+    return (<div className={`${styles.featuredProjects} selectedProjects`}>
 {
     <Grid container spacing={3}  >
         <Grid item xs={12} justify={'center'} >

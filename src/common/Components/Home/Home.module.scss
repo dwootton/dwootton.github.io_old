@@ -3,8 +3,8 @@
   color: #242424;
   margin-block-end: 0;
   margin-block-start: 0;
-  /*font-size: 64px;
-  width: 600px;*/
+  font-size: 64px;
+  width: 600px;
 }
 
 
@@ -16,7 +16,7 @@
   letter-spacing: 0.1em;
   color: #242424;
   margin-block-end: 0;
-  /*font-size: 22px;*/
+  font-size: 22px;
 }
 
 .titleContent {
@@ -24,14 +24,17 @@
   font-style: normal;
   font-weight: 200;
   color: #242424;
-  /*width: 900px;*/
+  width: 900px;
 
 }
 
-
+.callToAction {
+  font-size:20px;
+}
 
 .titleGroup {
     margin-block-start: 160px;
+    margin-block-end: 160px;
 
   z-index: 2;
   font-size: 30px;
@@ -62,6 +65,9 @@
     width: 100%;
     font-size: 22px;
   }
+  .titleContent {
+    width:100%;
+  }
 
   .title {
       font-size:38px;
@@ -72,6 +78,5 @@
     width:100%;
     margin-block-end:120px;
   }
-
 }
 

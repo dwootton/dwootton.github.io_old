@@ -1,9 +1,11 @@
 import React from "react";
 import Background from "../Background/Background";
 import Fade from "react-reveal/Fade";
-
+import {Link } from "react-scroll";
 import styles from "./Home.module.scss";
 import Projects from "../Projects/FeaturedProjects";
+import {EmailCopyButton} from '../Header/HeaderLinks';
+import Button from '@material-ui/core/Button'
 const Home = (props) => {
   return (
     <div>
@@ -21,11 +23,11 @@ const Home = (props) => {
             I develop interactive visualization tools that empower organizations to find insight from their data. 
             <br></br>
             <br></br>
-            Currently, I am visualizing product telemetry data at Microsoft.
+            Currently, I am visualizing product telemetry data at Microsoft. Previously a researcher at the Visualization Design Lab. 
           </h3>{" "}
           </Fade>
           <Fade bottom delay={1450}>
-          <h4 className={styles.callToAction}><span>Email me</span> or <span>see past projects</span></h4>
+         <span className={styles.callToAction}><EmailCopyButton/>  or <Button><Link smooth to={'selectedProjects'}>see past projects.</Link></Button></span> 
           </Fade>
       </div>
     <Fade bottom delay={1500}>
@@ -36,4 +38,16 @@ const Home = (props) => {
     </div>
   );
 };
+const CopyEmailButton = ()=>{
+
+}
+async function copyEmail(e) {
+  if (navigator.clipboard) {
+    e.preventDefault();
+    await navigator.clipboard.writeText("wootton.dylan@gmail.com");
+    return;
+  }
+}
+
+
 export default Home;
