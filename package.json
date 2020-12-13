@@ -6,13 +6,18 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@mui-treasury/styles": "^1.13.1",
     "@react-spring/parallax": "^9.0.0-rc.3",
+    "@storybook/addon-knobs": "^6.1.10",
+    "@storybook/addon-viewport": "^6.1.10",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "classnames": "^2.2.6",
+    "history": "^4.10.1",
     "material-ui": "^0.20.2",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",
     "react-lottie": "^1.2.3",
@@ -22,7 +27,8 @@
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.1",
     "react-spring": "^8.0.27",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.30.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,7 +36,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "storybook": "start-storybook -p 9001"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,6 +55,13 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.1.10",
+    "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
+    "sass-loader": "^10.1.0",
+    "storybook-css-modules-preset": "^1.0.5",
+    "style-loader": "^2.0.0"
   }
 }

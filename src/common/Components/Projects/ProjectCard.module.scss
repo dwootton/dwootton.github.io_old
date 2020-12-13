@@ -1,0 +1,34 @@
+.cardMedia {
+    font-size:300px;
+    background-color: rgba(0,0,0,.1); // Tint color
+    background-blend-mode: multiply;
+
+
+    transition: all 500ms;
+    
+}
+
+
+.card:hover .cardMedia {
+    transform: scale(1.05);
+    background-color: rgba(0,0,0,.9); // Tint color
+    background-blend-mode: multiply;
+}
+.card:hover .cardDescription {
+    opacity:1;
+
+}
+
+
+.cardTitle{
+    font-size:32px;
+
+}
+.cardDescription {
+    opacity:0;
+    transition: opacity 300ms;
+}
+
+.cardMedia:hover:before{
+    opacity: 1;
+}

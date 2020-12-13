@@ -1,10 +1,12 @@
 import React from "react";
 import { ReactComponent as logoSVG } from "../../../Assets/Logo.svg";
 import styles from "./Header.module.scss";
+import {NavLink} from "react-router-dom";
+
 const Logo = ({color='#020F03'}) => {
   return (
     <div className={styles.logo}>
-      <a href={"/"}>
+      <NavLink exact to={"/"}>
         <svg
           width='193'
           height='43'
@@ -26,7 +28,7 @@ const Logo = ({color='#020F03'}) => {
           <rect  y='30' x='22.5' width='7' height='6' fill={color} />
           <rect  y='3' x='30' width='7' height='33' fill={color} />
         </svg>
-      </a>
+      </NavLink>
     </div>
   );
 };

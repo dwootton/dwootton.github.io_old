@@ -3,15 +3,22 @@ import { MemoryRouter, Link as RouterLink, Route, Switch, withRouter } from "rea
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from "../Home/Home";
 import About from "../About/About"
+import ProjectRoutes from "../Routes/ProjectRoutes";
 
 const Main = ({location})=>{
     return <TransitionGroup className="transition-group">
     <CSSTransition key={location.key} timeout={500} classNames="fade">
       <section className="route-section">
-        <Switch location={location}>
-          <Route path="/Home" component={Home}></Route>
+        <Switch>
+            <div>
+            <Route exact path="/" component={Home}></Route>
           <Route path="/About" component={About}></Route>
-
+          <Route path="/Portfolio">
+          <ProjectRoutes/>
+          </Route>
+            
+            </div>
+         
         </Switch>
       </section>
     </CSSTransition>

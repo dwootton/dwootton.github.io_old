@@ -7,6 +7,9 @@
   width: 600px;
 }
 
+.content {
+  padding:64px;
+}
 
 .titleName {
   text-transform: uppercase;
@@ -29,7 +32,7 @@
 }
 
 .callToAction {
-  font-size:20px;
+  font-size:16px;
 }
 
 .titleGroup {
@@ -61,6 +64,10 @@
 }
 /* Min screen */
 @media (max-width: 576px) {
+
+.content {
+  padding:24px;
+}
   .titleGroup {
     width: 100%;
     font-size: 22px;

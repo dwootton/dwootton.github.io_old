@@ -23,8 +23,11 @@ let projects = [
   {
     id: "reVISit",
     title: "reVISit",
+    image:"https://i.imgur.com/XdteUVq.png",
     shortName: "RV",
     year: 2020,
+    
+
     liveURL: "https://revisit-analytics.github.io/reVISit/",
     githubURL: "https://github.com/visdesignlab/reVISit",
     projectTags: [PROJECT_TAG_ENUM["IxD"], PROJECT_TAG_ENUM["viz"], PROJECT_TAG_ENUM["fs"]],
@@ -37,23 +40,27 @@ let projects = [
       SKILLS_ENUMS["dm"],
       SKILLS_ENUMS["interviews"],
     ],
+    titleQuestion:"How can we better design interactions for visualizations?",
     videoURL: "",
     featured: true,
     shortDescription:
       "reVISit is a visualization tool that enables the exploration of user interaction data.",
     fullDescription:
       "Understanding user interactions with websites is hard. Often times, UX researchers are tasked with parsing through gigabytes of telemetry logs in order to understand what it is that users are doing. reVISit is an open-source visualization tool that enables users to quickly see users interactions and how those correlate with other tracked metrics. ",
-  },
+    imageGallery:[{description:"Home interface of reVISit.",image:"https://i.imgur.com/l4zUeF6.png"},{description:"reVISit workstream integration.",image:"https://i.imgur.com/XTPQW4o.png"}, {description:"Qualitative Coding in the reVISit interface.",image:"https://i.imgur.com/exavJfD.png"}]
+      },
   {
     id: "arcticExplorer",
     title: "Arctic Explorer",
     shortName: "AE",
     year: 2019,
+    image:"https://i.imgur.com/9gGUAt5.png",
     liveURL: "http://dylanwootton.com/Arctic-Explorer",
     githubURL: "https://github.com/dwootton",
     projectTags: [PROJECT_TAG_ENUM["viz"], PROJECT_TAG_ENUM["fs"]],
     skills: [SKILLS_ENUMS["d3"], SKILLS_ENUMS["js"], SKILLS_ENUMS["interviews"]],
     featured: true,
+    titleQuestion:"In a rapidly changing environment, how can we understand trends of sea-ice density?",
     shortDescription:
       "Arctic Explorer enables researchers to analyze sea-ice concentration data for the Arctic.",
     fullDescription:

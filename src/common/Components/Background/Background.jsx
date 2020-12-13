@@ -29,6 +29,9 @@ const Background = () => {
             },
             opacity: {
               value: 0.2,
+              animation:{
+                enable:false
+              }
             },
             shape: {
               type: "circle",
