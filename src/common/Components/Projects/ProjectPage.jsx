@@ -2,6 +2,12 @@ import React from "react";
 import styles from "./projectStyles.module.scss";
 import { useSpring, animated } from "react-spring";
 import { Fade } from "react-reveal";
+
+import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'; // demo video
+import WebIcon from '@material-ui/icons/Web'; // live url
+import DescriptionIcon from '@material-ui/icons/Description'; // paper 
+
+
 const ProjectPage = ({ projectConfiguration }) => {
   return (
     <div>
@@ -15,7 +21,7 @@ const ProjectPage = ({ projectConfiguration }) => {
   );
 };
 
-const TitlePhoto = ({ image, title, titleQuestion, fullDescription,imageGallery }) => {
+const TitlePhoto = ({ image, title, titleQuestion, fullDescription,imageGallery, liveURL, githubURL, videoURL, }) => {
   return (
     <div>
       <div className={styles.titlePhoto} style={{ backgroundImage: image }}>
@@ -28,6 +34,7 @@ const TitlePhoto = ({ image, title, titleQuestion, fullDescription,imageGallery 
       </div>
       <div className={styles.content}>
       <Fade><h5 className={styles.fullDescription}>{fullDescription}</h5></Fade>
+      <Fade delay={150}><ExternalLinks liveURL={liveURL} githubURL={githubURL} videoURL={videoURL} ></ExternalLinks></Fade>
         {imageGallery && imageGallery.map(image=>{
             return <Fade><img className={styles.galleryImage} alt={image.description} src={image.image}></img> </Fade>
         })}
@@ -35,6 +42,11 @@ const TitlePhoto = ({ image, title, titleQuestion, fullDescription,imageGallery 
     </div>
   );
 };
+
+const ExternalLinks = ({liveURL,githubURL,videoURL})=>{
+    return <div className={styles.externalLinks}>{liveURL && <a href={liveURL} rel="noopener noreferrer nofollow">Software</a>}{githubURL && <a href={githubURL} rel="noopener noreferrer nofollow">Code</a>}{videoURL && <a href={videoURL} rel="noopener noreferrer nofollow">Demo</a>}</div>
+}
+
 export default ProjectPage;
 
 export const SidePhotoFade = ({ children, delay = 0, ...props }) => {

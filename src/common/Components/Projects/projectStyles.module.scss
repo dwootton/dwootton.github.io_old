@@ -13,7 +13,8 @@
   box-sizing: border-box;
   position: absolute;
   font-family: Helvetica, sans-serif;
-  background: whitesmoke;
+  background: rgba(245,245,245,0.85);
+  
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -60,7 +61,23 @@
   box-shadow: 0 8px 6px -6px rgba(23,23,23,0.1);
 
 }
+.externalLinks {
+  text-align: center;
+  margin-bottom: 16px;
+}
 
+.externalLinks > a {
+  font-size: 1.225rem;
+  margin: 8px 8px 8px 8px;
+  color: #4d4d4d;
+  transition: color 200ms;
+  text-decoration: none;
+}
+.externalLinks > a:hover {
+  color: #2d2d2d;
+
+
+}
 /* Min screen */
 @media (max-width: 700px) {
   .titleGroup {
