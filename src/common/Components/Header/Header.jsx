@@ -57,7 +57,7 @@ const Header = (props) => {
 
       </Toolbar>
             {" "}
-            <Overlay></Overlay>
+            <HeaderLinks onClick={handleDrawerToggle}></HeaderLinks>
           </div>
         </Drawer>
         </Hidden>
@@ -65,13 +65,6 @@ const Header = (props) => {
     </AppBar>
   );
 };
-
-const Overlay = ()=>{
-  return <div>
-            <HeaderLinks></HeaderLinks>
-
-  </div>
-}
 
 Header.defaultProp = {
   color: "white",

@@ -44,7 +44,7 @@ const TitlePhoto = ({ image, title, titleQuestion, fullDescription,imageGallery,
 };
 
 const ExternalLinks = ({liveURL,githubURL,videoURL})=>{
-    return <div className={styles.externalLinks}>{liveURL && <a href={liveURL} rel="noopener noreferrer nofollow">Software</a>}{githubURL && <a href={githubURL} rel="noopener noreferrer nofollow">Code</a>}{videoURL && <a href={videoURL} rel="noopener noreferrer nofollow">Demo</a>}</div>
+    return <div className={styles.externalLinks}>{liveURL && <a href={liveURL} rel="noopener noreferrer nofollow" target="_blank">Software</a>}{githubURL && <a href={githubURL}  target="_blank" rel="noopener noreferrer nofollow">Code</a>}{videoURL && <a href={videoURL} target="_blank" rel="noopener noreferrer nofollow">Demo</a>}</div>
 }
 
 export default ProjectPage;

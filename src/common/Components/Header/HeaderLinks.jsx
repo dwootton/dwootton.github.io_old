@@ -14,13 +14,15 @@ import styles from "./Header.module.scss";
 import { useLocation } from "react-router-dom";
 
 import {Trail} from "../../Animations/Animations";
+
 const MENU_ITEM_TYPES = {
   internalLink: "internalLink",
   externalLink: "externalLink",
 };
 const MENU_ITEMS = [
-  { to: "/", type: "internalLink", displayText: "Portfolio" },
-  { to: "/About", type: "internalLink", displayText: "About" },
+  { to: "/", type: "internalLink", displayText: "Home" },
+  /* { to: "/Portfolio", type: "internalLink", displayText: "Portfolio" },
+ { to: "/About", type: "internalLink", displayText: "About" },*/
   { to: "https://www.twitter.com/WoottonDylan", type: "externalLink", displayText: "Twitter" },
   {
     to: "https://www.linkedin.com/in/dylanwootton/",
@@ -29,10 +31,10 @@ const MENU_ITEMS = [
   },
 ];
 const MenuItem = (props) => {
-  const {item, selected} = props;
+  const {item, selected, onClick} = props;
   let content;
   if (item.type === MENU_ITEM_TYPES.internalLink) {
-    content = <Link to={item.to}>{item.displayText}</Link>;
+    content = <Link onClick={onClick}to={item.to}>{item.displayText}</Link>;
   } else if (item.type === MENU_ITEM_TYPES.externalLink) {
     content = (<a href={item.to} target='_blank' rel='noopener'>
       {item.displayText}
@@ -43,7 +45,7 @@ const MenuItem = (props) => {
 
 
 
-const NavigationMenu = () => {
+const NavigationMenu = ({onClick}) => {
   const location = useLocation();
 
   return (
@@ -52,7 +54,7 @@ const NavigationMenu = () => {
         <Trail delay={200}>
 
           {MENU_ITEMS.map((item,index) => {
-            return<MenuItem item={item} selected={location === item.to}></MenuItem>;
+            return<MenuItem item={item} onClick={onClick}selected={location === item.to}></MenuItem>;
           })}
 </Trail>
         </ul>

@@ -40,12 +40,12 @@ let projects = [
       SKILLS_ENUMS["interviews"],
     ],
     titleQuestion: "How can we better design interactions for visualizations?",
-    videoURL: "",
+    videoURL: "https://youtu.be/-wzOqeDXFI0",
     featured: true,
     shortDescription:
       "reVISit is a visualization tool that enables the exploration of user interaction data.",
     fullDescription:
-      "Understanding user interactions with websites is hard. Often times, UX researchers are tasked with parsing through gigabytes of telemetry logs in order to understand what it is that users are doing. reVISit is an open-source visualization tool that enables users to quickly see users interactions and how those correlate with other tracked metrics. ",
+      "Understanding user interactions with websites is hard. Often times, UX researchers are tasked with parsing through gigabytes of telemetry logs in order to understand what it is that users are doing. reVISit is an open-source visualization tool that enables researchers to quickly see users interactions and how those correlate with other tracked metrics. ",
     imageGallery: [
       { description: "Home interface of reVISit.", image: "https://i.imgur.com/l4zUeF6.png" },
       { description: "reVISit workstream integration.", image: "https://i.imgur.com/XTPQW4o.png" },
@@ -63,6 +63,7 @@ let projects = [
     image: "https://i.imgur.com/9gGUAt5.png",
     liveURL: "http://dylanwootton.com/Arctic-Explorer",
     githubURL: "https://github.com/dwootton",
+    videoURL:"https://www.youtube.com/watch?v=EbsGiAUuHX0",
     projectTags: [PROJECT_TAG_ENUM["viz"], PROJECT_TAG_ENUM["fs"]],
     skills: [SKILLS_ENUMS["d3"], SKILLS_ENUMS["js"], SKILLS_ENUMS["interviews"]],
     featured: true,
@@ -99,7 +100,7 @@ let projects = [
         image: "https://i.imgur.com/VzhnoC1.png",
       },
     ],
-  },
+  }/*,
   {
     id: "aqExplorer",
     title: "AirU",
@@ -112,7 +113,7 @@ let projects = [
     skills: [SKILLS_ENUMS["d3"], SKILLS_ENUMS["js"], SKILLS_ENUMS["interviews"]],
     videoURL: "https://youtu.be/6SYMfRFwgu8",
     featured: true,
-  },
+  },*/
 ];
 
 export default projects;
