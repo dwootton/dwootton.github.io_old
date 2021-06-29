@@ -21,7 +21,7 @@ const Header = (props) => {
   };
 
   return (
-    <AppBar className={styles.appBar} style={{"background-color": "white"}}>
+    <AppBar className={styles.appBar} elevation={0} style={{"background-color": "white"}}>
       <Toolbar className={styles.toolBar} style={{width: "100%"}}>
         <Logo />
         {/*<Hidden smDown implementation='css'>

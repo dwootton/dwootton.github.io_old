@@ -273,7 +273,6 @@ export function EmailCopyButton(props) {
   };
   const [emailContent, setEmailContent] = useState("toCopy");
   return (
-     
         <Tooltip
           id='mail-tooltip'
           title={mapper[emailContent]}
