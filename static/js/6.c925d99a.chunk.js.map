@@ -1,0 +1,1 @@
+{"version":3,"sources":["common/Components/Projects/Portfolio.jsx"],"names":["Portfolio"],"mappings":"4HAAA,2BAMeA,UAJG,WACjB,OAAO","file":"static/js/6.c925d99a.chunk.js","sourcesContent":["import React from 'react';\n\nconst Portfolio = ()=>{\n return <div></div>\n}\n\nexport default Portfolio"],"sourceRoot":""}
