@@ -13,10 +13,10 @@ const Home = (props) => {
       <div className={styles.content}>
       <div className={styles.titleGroup}>
         
-        <Fade bottom delay={950}>
-          <h1 className={styles.title}> Data Visualization Engineer <span role="img" aria-label="bar chart emoji">📊</span></h1>
+        <Fade top distance={'25px'} delay={650}>
+          <h1 className={styles.title}> Data Visualization Engineer</h1>
         </Fade>
-        <Fade bottom delay={1450}>
+        <Fade  top distance={'25px'} delay={1250}>
           <h3 className={styles.titleContent}>
             I develop interactive visualization tools that empower organizations to find insight
             from their data.
@@ -26,7 +26,7 @@ const Home = (props) => {
             at the Visualization Design Lab.
           </h3>{" "}
         </Fade>
-        <Fade bottom delay={2150}>
+        <Fade top distance={'25px'} delay={1500}>
           <span className={styles.callToAction}>
             <EmailCopyButton /> or{" "}
             <Button>
@@ -37,7 +37,7 @@ const Home = (props) => {
           </span>
         </Fade>
       </div>
-      <Fade bottom>
+      <Fade distance={'25px'} bottom>
         <Projects></Projects>
       </Fade>
       </div>

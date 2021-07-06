@@ -23,10 +23,12 @@ let projects = [
   {
     id: "reVISit",
     title: "reVISit",
+    longTitle:"reVISit – Analysis Tool for User Interactions",
     image: "https://i.imgur.com/R9kGn0y.png",
     shortName: "RV",
+    client:"Visualization Design Lab",
+    clientURL:"https://vdl.sci.utah.edu",
     year: 2020,
-
     liveURL: "https://revisit-analytics.github.io/reVISit/",
     githubURL: "https://github.com/visdesignlab/reVISit",
     projectTags: [PROJECT_TAG_ENUM["IxD"], PROJECT_TAG_ENUM["viz"], PROJECT_TAG_ENUM["fs"]],
@@ -39,7 +41,7 @@ let projects = [
       SKILLS_ENUMS["dm"],
       SKILLS_ENUMS["interviews"],
     ],
-    titleQuestion: "How can we better design interactions for visualizations?",
+    titleQuestion: "How can we design better interactive visualizations?",
     videoURL: "https://youtu.be/-wzOqeDXFI0",
     featured: true,
     shortDescription:
@@ -54,12 +56,16 @@ let projects = [
         image: "https://i.imgur.com/exavJfD.png",
       },
     ],
+    paperURL:"https://vdl.sci.utah.edu/publications/2021_chi_revisit/"
   },
   {
     id: "arcticExplorer",
     title: "Arctic Explorer",
+    longTitle:"Arctic Explorer – Google Maps for the Arctic",
     shortName: "AE",
     year: 2019,
+    client:"The Golden Lab",
+    clientURL:"https://www.math.utah.edu/~golden/",
     image: "https://i.imgur.com/9gGUAt5.png",
     liveURL: "http://dylanwootton.com/Arctic-Explorer",
     githubURL: "https://github.com/dwootton",
@@ -68,7 +74,7 @@ let projects = [
     skills: [SKILLS_ENUMS["d3"], SKILLS_ENUMS["js"], SKILLS_ENUMS["interviews"]],
     featured: true,
     titleQuestion:
-      "In a rapidly changing environment, how can we understand trends of sea-ice density?",
+      "In a rapidly changing environment, how can we better understand trends of sea-ice density?",
     shortDescription:
       "Arctic Explorer enables researchers to analyze sea-ice concentration data for the Arctic.",
     fullDescription:
