@@ -106,20 +106,32 @@ let projects = [
         image: "https://i.imgur.com/VzhnoC1.png",
       },
     ],
-  }/*,
+  },
   {
     id: "aqExplorer",
-    title: "AirU",
+    title: "Air U",
     shortName: "AQ",
-    image: "",
+    longTitle:"Air U – Revealing Bias in Air Quality Monitoring",
+    image: "https://i.imgur.com/Jrd4WbI.png",
+    shortDescription:
+      "The Air U project investigates the placement of air quality sensors and reveals the importance of environmental-justice.",
+    fullDescription:
+      `Poor air quality impacts public health due to increased incidence of cancers, heart diseases, and various respiratory disorders. Many Utah cities have hazardous air quality episodes as a result of inversions and forest fires; however, despite its impact on our community, the data obtained about PM 2.5 levels is often course- often being measured for an entire zip code. Such granularity is unacceptable as research suggests that microclimates of pollution exist that are not captured by these measurements. 
+
+      As such, a model was built to provide finer resolution PM 2.5 estimates throughout SLC. However, this model exhibited high levels of uncertainty over poorer neighborhoods in SLC.
+      
+      The Air U project involved uncovering, quantifying, and remediating this bias and constituted my undergraduate thesis work.`
+      ,
+    client:"Air Q and U",
+    clientURL:"https://aqandu.org/",
     year: 2018,
-    liveURL: "http://dylanwootton.com/AQExplorer",
     githubURL: "https://github.com/dwootton/AQExplorer",
     projectTags: [PROJECT_TAG_ENUM["viz"], PROJECT_TAG_ENUM["fe"]],
     skills: [SKILLS_ENUMS["d3"], SKILLS_ENUMS["js"], SKILLS_ENUMS["interviews"]],
     videoURL: "https://youtu.be/6SYMfRFwgu8",
     featured: true,
-  },*/
+    paperURL:"https://raw.githubusercontent.com/dwootton/dwootton.github.io/3b25557fb090d63c05fe5e4d821fe772160629ea/assets/DylanWoottonThesis.pdf"
+  }
 ];
 
 export default projects;
